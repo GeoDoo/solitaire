@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
+import Deck from './components/Deck'
 import './libs/css/cards.css'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div className="playingCards fourColours faceImages simpleCards inText rotateHand">
-        <ul>
-          <li>
-            <div className="card rank-7 spades">
-                <span className="rank">7</span>
-                <span className="suit">&spades;</span>
-            </div>
-          </li>
-        </ul>
+       <Deck />
       </div>
     )
   }
