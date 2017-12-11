@@ -10,6 +10,8 @@ const ascii = kind => {
 			return '♣'
 		case 'clubs':
 			return '♠'
+		default:
+			return
 	}
 }
 
