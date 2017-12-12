@@ -16,7 +16,7 @@ class Deck extends Component {
 		for (let kind in deck) {
 			cardList.push(
 				deck[kind].map((card) => {
-					return <li key={`card-${kind}-${card}`}><Card kind={kind} rank={card} /></li>
+					return <li key={`card-${kind}-${card}`}><Card kind={kind} rank={card} back={'back'} /></li>
 				})
 			)
 		}
@@ -26,7 +26,7 @@ class Deck extends Component {
 
 	render() {
 		return (
-			<ul>
+			<ul className="deck">
 				{this.renderCards()}
 			</ul>
 		)
