@@ -1,25 +1,11 @@
 import React from 'react'
-
-const ascii = kind => {
-	switch(kind) {
-		case 'diams':
-			return '♦'
-		case 'hearts':
-			return '♥'
-		case 'spades':
-			return '♣'
-		case 'clubs':
-			return '♠'
-		default:
-			return
-	}
-}
-
-const Card = (props) => {
+import { ascii } from '../helpers/helpers'
+ 
+const Card = ({rank, kind}) => {
 	return (
-		<div className={`card rank-${props.rank} ${props.kind}`}>
-	      <span className="rank">{props.rank.toUpperCase()}</span>
-	      <span className="suit">{ascii(props.kind)}</span>
+		<div className={`card rank-${rank} ${kind}`}>
+	      <span className="rank">{rank.toUpperCase()}</span>
+	      <span className="suit">{ascii(kind)}</span>
 	  </div>
 	)
 }
